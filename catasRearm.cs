@@ -37,6 +37,9 @@ public int currentAmmo(string[] containerNames, string itemName) {
 public void Main(string argument, UpdateType updateSource) {
 
     // SET THESE:
+    string ammoTypeA_Name = "MediumCalibreAmmo";
+    string ammoTypeB_Name = "LargeCalibreAmmo";
+
     string[] ammoTypeA_ContainerNames = {
         "container 1 Name",
         "container 2 Name"
@@ -48,14 +51,14 @@ public void Main(string argument, UpdateType updateSource) {
     };
 
     Dictionary<string,int> requiredAmmoAmounts = {
-        {"MediumCalibreAmmo", 100},
-        {"LargeCalibreAmmo", 100}
+        {ammoTypeA_Name, 100},
+        {ammoTypeB_Name, 100}
     }
     // STOP SETTING
     
 
-    int ammoTypeA_current = currentAmmo(ammoTypeA_ContainerNames, "MediumCalibreAmmo");
-    int ammoTypeB_current = currentAmmo(ammoTypeB_ContainerNames, "LargeCalibreAmmo");
+    int ammoTypeA_current = currentAmmo(ammoTypeA_ContainerNames, ammoTypeA_Name);
+    int ammoTypeB_current = currentAmmo(ammoTypeB_ContainerNames, ammoTypeB_Name);
 
     
 
